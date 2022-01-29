@@ -10,7 +10,8 @@ impl FileExt {
         let path = Path::new(&path);
 
         let mut path_extension = String::new();
-    
+        
+        // Extract the extension from a Path into an Option<Some(OsString), None> then into Option<Some(String), None>
         let _ = match path.extension() {
             Some(result) => {
                 let _ = match result.to_str() {
