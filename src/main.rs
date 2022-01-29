@@ -33,11 +33,11 @@ impl FileExt {
 }
 
 fn main() {
+    let my_file_1 = FileExt::from("C:\\foo.txt");
+    
     let path_2 = String::from("C:\\bar.bat");
     let path_3 = Path::new("C:\\foobar.exe");
     
-
-    let my_file_1 = FileExt::from("C:\\foo.txt");
     let my_file_2 = FileExt::from(&path_2);
     let my_file_3 = FileExt::from(&path_3);
 
